@@ -16,9 +16,9 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'clean package'
 - bash: |
-  pwd
-  ls -la 
-  ls -la target
+    pwd
+    ls -la 
+    ls -la target
 #- task: PublishPipelineArtifact@0
 #  inputs:
 #    artifactName: 'springboot-helloworld'
