@@ -5,13 +5,13 @@
 
 trigger:
 - master
+- develop
 
 pool:
-  vmImage: 'Ubuntu-18.04'
+  vmImage: 'Ubuntu-16.04'
 
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'package'
-    
+    goals: 'clean package'
