@@ -15,3 +15,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean package'
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'springboot-helloworld'
+    targetPath: 'target/springboot-helloworld-*.jar$'
