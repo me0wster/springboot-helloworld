@@ -14,7 +14,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'clean package'
+    goals: 'clean package -Dmaven.test.skip=true'
 - bash: |
     pwd
     ls -la 
