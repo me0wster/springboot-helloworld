@@ -14,11 +14,11 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: DockerInstaller@1
-  displayName: Docker Installer
-  inputs:
-    dockerVersion: 18.03.1-ce
-    releaseType: stable
+# - task: DockerInstaller@1
+#   displayName: Docker Installer
+#   inputs:
+#     dockerVersion: 18.03.1-ce
+#     releaseType: stable
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
