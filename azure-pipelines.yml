@@ -14,7 +14,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: DockerInstaller@0
+- task: DockerInstaller@1
   displayName: Docker Installer
   inputs:
     dockerVersion: 18.03.1-ce
