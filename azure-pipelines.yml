@@ -3,6 +3,9 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+variables:
+  projectName: springboot-helloworld
+
 trigger:
 - master
 - develop
@@ -11,7 +14,17 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+# - task: DockerInstaller@1
+#   displayName: Docker Installer
+#   inputs:
+#     dockerVersion: 18.03.1-ce
+#     releaseType: stable
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'clean package'
+    goals: 'clean package -Dmaven.test.skip=true'
+- script: docker build -t $(projectName) .
+# - task: PublishPipelineArtifact@0
+#   inputs:
+#     artifactName: 'springboot-helloworld'
+#     targetPath: 'target/springboot-helloworld-0.0.1-SNAPSHOT.jar'
