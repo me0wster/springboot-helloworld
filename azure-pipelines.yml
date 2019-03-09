@@ -19,10 +19,6 @@ steps:
 #   inputs:
 #     dockerVersion: 18.03.1-ce
 #     releaseType: stable
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean package -Dmaven.test.skip=true'
 - script: docker build -t $(projectName) .
 # - task: PublishPipelineArtifact@0
 #   inputs:
