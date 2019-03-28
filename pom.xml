@@ -16,7 +16,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Spring Boot Hello World</name>
-	<description>Boo and yah!!</description>
+	<description>Revert</description>
 
 	<properties>
 		<java.version>1.8</java.version>
